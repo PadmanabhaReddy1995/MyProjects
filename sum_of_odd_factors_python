@@ -1,0 +1,13 @@
+# Program to find the sum of odd factors of the given number
+n = int(input())
+sum_odd_factors = 0
+# Dividing 'n' by 2 until n is odd so as to ignore the even factors
+while n%2==0:
+    n = n//2
+    
+# collecting the factors of n and adding all the factors to find the sum
+for i in range(1,n+1):
+    if n%i == 0:
+        sum_odd_factors += i
+        
+print(sum_odd_factors)
